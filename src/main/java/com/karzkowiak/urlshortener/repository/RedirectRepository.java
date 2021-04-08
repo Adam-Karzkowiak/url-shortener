@@ -7,6 +7,7 @@ import com.karzkowiak.urlshortener.model.Redirect;
 import java.util.Optional;
 
 @Repository
+public
 interface RedirectRepository extends JpaRepository<Redirect, Long> {
     Optional<Redirect> findByAlias(String alias);
 
