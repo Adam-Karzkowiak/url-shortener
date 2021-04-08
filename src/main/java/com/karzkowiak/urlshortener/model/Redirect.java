@@ -1,5 +1,6 @@
 package com.karzkowiak.urlshortener.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.NaturalId;
 
@@ -14,7 +15,8 @@ import javax.validation.constraints.NotNull;
 public class Redirect {
     @Id
     @GeneratedValue
-    private long id;
+    @JsonIgnore
+    private Long id;
 
     @NaturalId
     @Column(unique = true, nullable = false)
